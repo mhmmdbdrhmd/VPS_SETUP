@@ -1,0 +1,18 @@
+apt-get update -y && apt-get upgrade -y
+
+reboot 
+
+apt-get install jq
+
+bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)
+
+curl -L https://raw.githubusercontent.com/mhmmdbdrhmd/VPS_SETUP/main/generate_v2ray_config.sh > generate_v2ray_config.sh
+
+curl -L https://raw.githubusercontent.com/mhmmdbdrhmd/VPS_SETUP/main/napsternet_config.sh > napsternet_config.sh
+
+curl -L https://raw.githubusercontent.com/mhmmdbdrhmd/VPS_SETUP/main/update_config.sh > update_config.sh
+
+./generate_v2ray_config.sh --ip EU_IP -n x-ui_NAME -p x-ui_PORT -i "x-ui_ID"
+
+./update_config.sh -n x-ui_NAME -p x-ui_PORT -i "x-ui_ID"
+
