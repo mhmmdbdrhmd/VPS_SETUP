@@ -12,6 +12,8 @@ curl -L https://raw.githubusercontent.com/mhmmdbdrhmd/VPS_SETUP/main/napsternet_
 
 curl -L https://raw.githubusercontent.com/mhmmdbdrhmd/VPS_SETUP/main/update_config.sh > update_config.sh
 
+chmod a+x update_config.sh napsternet_config.sh generate_v2ray_config.sh
+
 ./generate_v2ray_config.sh --ip EU_IP -n x-ui_NAME -p x-ui_PORT -i "x-ui_ID"
 
 ./update_config.sh -n x-ui_NAME -p x-ui_PORT -i "x-ui_ID"
